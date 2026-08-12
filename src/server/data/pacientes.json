@@ -1,0 +1,37 @@
+{
+    "PAC-1092": {
+        "nombre": "Juan Pérez",
+        "edad": 35,
+        "imc": 26.5,
+        "condiciones_medicas": [
+            "resistencia_a_la_insulina"
+        ],
+        "alergias": [
+            "mariscos",
+            "lacteos"
+        ],
+        "objetivo": "Reducción de grasa"
+    },
+    "PAC-1093": {
+        "nombre": "María Gonzalez",
+        "edad": 28,
+        "imc": 22.1,
+        "condiciones_medicas": [],
+        "alergias": [
+            "gluten"
+        ],
+        "objetivo": "Mantenimiento"
+    },
+    "PAC-1094": {
+        "nombre": "Carlos López",
+        "edad": 45,
+        "imc": 31.0,
+        "condiciones_medicas": [
+            "hipertension"
+        ],
+        "alergias": [
+            "frutos_secos"
+        ],
+        "objetivo": "Pérdida de peso"
+    }
+}

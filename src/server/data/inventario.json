@@ -1,0 +1,34 @@
+{
+    "zona_10": {
+        "omega_3": {
+            "disponible": 12,
+            "precio": 150.0
+        },
+        "proteina_suero": {
+            "disponible": 5,
+            "precio": 450.0
+        },
+        "vitamina_c": {
+            "disponible": 20,
+            "precio": 80.0
+        }
+    },
+    "zona_14": {
+        "omega_3": {
+            "disponible": 0,
+            "precio": 150.0
+        },
+        "proteina_suero": {
+            "disponible": 15,
+            "precio": 450.0
+        },
+        "vitamina_c": {
+            "disponible": 50,
+            "precio": 80.0
+        },
+        "creatina": {
+            "disponible": 8,
+            "precio": 300.0
+        }
+    }
+}

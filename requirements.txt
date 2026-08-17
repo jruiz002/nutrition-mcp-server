@@ -1,2 +1,9 @@
 rich==13.7.1
-anthropic==0.21.3
+openai>=1.0.0
+python-dotenv==1.0.1
+
+# Official Git MCP server (spawned as a subprocess by the chatbot host).
+# Pinned mcp<2.0.0: mcp-server-git's decorator-based tool registration
+# (@server.list_tools()) is incompatible with the mcp 2.x SDK.
+mcp<2.0.0
+mcp-server-git

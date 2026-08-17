@@ -1,101 +1,121 @@
 id,nombre,categoria,proteina_g,carbohidratos_g,grasa_g,kcal,alergeno
-AL-001,Salmón,pescado,20.0,0.0,13.0,208,pescado
-AL-002,Pechuga de Pollo,aves,31.0,0.0,3.6,165,ninguno
-AL-003,Pavo Magro,aves,29.0,0.0,2.0,135,ninguno
-AL-004,Huevos,lacteos_huevos,13.0,1.1,11.0,155,huevo
-AL-005,Tofu,vegetariano,16.0,1.9,8.7,144,soya
-AL-006,Lentejas,legumbres,9.0,20.0,0.4,116,ninguno
-AL-007,Arroz Integral,cereales,2.6,23.0,0.9,111,ninguno
-AL-008,Avena,cereales,16.9,66.3,6.9,389,gluten_traza
-AL-009,Atún en Agua,pescado,25.5,0.0,0.8,116,pescado
-AL-010,Leche Entera,lacteos,3.2,4.8,3.3,61,lacteos
-AL-011,Leche de Almendras,vegetariano,0.4,0.1,1.1,13,frutos_secos
-AL-012,Yogur Griego,lacteos,10.0,3.6,0.4,59,lacteos
-AL-013,Carne de Res Magra,carnes,26.0,0.0,15.0,250,ninguno
-AL-014,Camarones,mariscos,24.0,0.2,0.3,99,mariscos
-AL-015,Frijoles Negros,legumbres,21.0,62.0,0.9,341,ninguno
-AL-016,Pasta de Trigo,cereales,14.0,75.0,1.5,371,gluten
-AL-017,Espinaca,verduras,2.9,3.6,0.4,23,ninguno
-AL-018,Brócoli,verduras,2.8,6.6,0.4,34,ninguno
-AL-019,Nueces,frutos_secos,15.0,14.0,65.0,654,frutos_secos
-AL-020,Manzana,frutas,0.3,14.0,0.2,52,ninguno
-AL-021,Plátano,frutas,1.1,22.8,0.3,89,ninguno
-AL-022,Quinoa Orgánico,variado,26.0,28.0,3.4,387,soya
-AL-023,Quinoa Magro,variado,18.0,33.8,48.2,182,soya
-AL-024,Crema Sano,variado,25.2,35.0,36.9,240,lacteos
-AL-025,Queso Magro,variado,6.2,51.1,42.7,292,frutos_secos
-AL-026,Crema Integral,variado,18.8,46.5,21.2,135,lacteos
-AL-027,Pan Sano,variado,19.7,4.5,11.6,397,lacteos
-AL-028,Crema Orgánico,variado,24.9,51.6,43.2,312,soya
-AL-029,Quinoa Orgánico,variado,22.3,65.9,42.2,483,lacteos
-AL-030,Cacahuate Blanco,variado,11.1,68.4,38.3,388,lacteos
-AL-031,Chía Blanco,variado,4.5,9.3,38.4,215,ninguno
-AL-032,Crema Integral,variado,7.8,31.3,9.0,327,frutos_secos
-AL-033,Mantequilla Orgánico,variado,3.8,53.7,46.7,210,ninguno
-AL-034,Pan Sano,variado,7.9,73.6,39.8,473,lacteos
-AL-035,Crema Blanco,variado,18.6,12.0,13.0,426,gluten
-AL-036,Quinoa Premium,variado,24.3,45.1,18.6,53,gluten
-AL-037,Mantequilla Premium,variado,22.6,8.6,45.2,346,ninguno
-AL-038,Cerdo Sano,variado,9.9,53.3,28.2,328,ninguno
-AL-039,Crema Orgánico,variado,27.0,75.1,16.9,429,gluten
-AL-040,Crema Magro,variado,22.3,19.9,28.2,471,lacteos
-AL-041,Garbanzo Blanco,variado,26.8,17.5,45.8,387,gluten
-AL-042,Chía Magro,variado,2.9,20.2,48.4,223,lacteos
-AL-043,Queso Magro,variado,12.9,48.2,3.9,344,gluten
-AL-044,Cacahuate Premium,variado,29.1,52.7,48.0,470,soya
-AL-045,Garbanzo Orgánico,variado,15.8,35.5,46.7,378,ninguno
-AL-046,Garbanzo Orgánico,variado,22.7,79.4,44.0,295,soya
-AL-047,Cacahuate Integral,variado,11.4,46.7,48.0,240,gluten
-AL-048,Pavo Blanco,variado,20.8,72.4,36.5,474,gluten
-AL-049,Queso Sano,variado,4.5,3.9,30.7,70,gluten
-AL-050,Cerdo Sano,variado,1.8,29.6,39.9,457,lacteos
-AL-051,Pan Sano,variado,10.1,4.9,12.2,167,soya
-AL-052,Chía Sano,variado,0.8,23.2,43.0,439,soya
-AL-053,Garbanzo Orgánico,variado,14.8,16.5,38.2,413,ninguno
-AL-054,Pan Sano,variado,14.3,41.2,40.3,134,frutos_secos
-AL-055,Mantequilla Magro,variado,9.1,75.5,4.7,113,gluten
-AL-056,Mantequilla Orgánico,variado,9.7,34.4,38.0,191,frutos_secos
-AL-057,Cerdo Integral,variado,12.3,35.5,48.1,287,frutos_secos
-AL-058,Garbanzo Premium,variado,17.7,29.6,5.8,271,soya
-AL-059,Queso Sano,variado,23.1,28.3,21.0,309,soya
-AL-060,Pan Integral,variado,5.0,13.7,1.5,280,ninguno
-AL-061,Cacahuate Blanco,variado,20.0,78.2,43.7,191,soya
-AL-062,Crema Sano,variado,9.8,24.0,43.0,251,frutos_secos
-AL-063,Chía Orgánico,variado,18.5,50.5,40.6,305,soya
-AL-064,Crema Blanco,variado,27.8,69.0,4.0,102,frutos_secos
-AL-065,Quinoa Premium,variado,9.1,64.2,44.2,423,lacteos
-AL-066,Pavo Premium,variado,13.5,14.5,33.6,370,ninguno
-AL-067,Garbanzo Sano,variado,25.9,42.8,37.3,206,frutos_secos
-AL-068,Queso Orgánico,variado,24.5,50.7,24.3,383,lacteos
-AL-069,Pan Premium,variado,16.3,41.7,11.1,365,soya
-AL-070,Cacahuate Integral,variado,26.6,0.6,17.3,348,ninguno
-AL-071,Mantequilla Blanco,variado,28.6,66.5,40.7,210,soya
-AL-072,Crema Premium,variado,5.0,71.1,30.2,175,lacteos
-AL-073,Pavo Magro,variado,15.7,3.9,43.9,480,soya
-AL-074,Mantequilla Orgánico,variado,17.1,3.6,16.4,234,frutos_secos
-AL-075,Quinoa Blanco,variado,10.0,65.9,30.6,331,soya
-AL-076,Queso Blanco,variado,0.7,31.5,15.2,254,lacteos
-AL-077,Quinoa Orgánico,variado,26.7,3.4,13.1,489,gluten
-AL-078,Quinoa Magro,variado,12.7,70.9,24.7,155,ninguno
-AL-079,Pan Sano,variado,12.8,73.3,14.1,277,gluten
-AL-080,Quinoa Orgánico,variado,27.1,42.3,4.7,383,frutos_secos
-AL-081,Quinoa Blanco,variado,20.9,22.4,38.7,380,soya
-AL-082,Crema Sano,variado,11.6,41.0,32.9,211,frutos_secos
-AL-083,Cerdo Premium,variado,23.0,59.1,5.0,436,soya
-AL-084,Garbanzo Magro,variado,28.4,50.2,49.2,278,gluten
-AL-085,Mantequilla Blanco,variado,25.6,53.0,45.0,174,frutos_secos
-AL-086,Cerdo Orgánico,variado,23.7,66.0,39.4,50,lacteos
-AL-087,Chía Sano,variado,18.6,78.6,19.2,343,frutos_secos
-AL-088,Cerdo Integral,variado,18.9,33.1,15.7,304,frutos_secos
-AL-089,Pan Integral,variado,18.9,55.6,0.8,244,frutos_secos
-AL-090,Queso Magro,variado,18.8,12.9,37.1,249,soya
-AL-091,Cerdo Orgánico,variado,20.7,30.7,44.8,480,lacteos
-AL-092,Pan Blanco,variado,9.9,7.8,2.7,271,lacteos
-AL-093,Crema Sano,variado,24.0,38.5,30.1,169,ninguno
-AL-094,Cerdo Premium,variado,21.1,15.9,5.8,462,soya
-AL-095,Cerdo Blanco,variado,3.4,65.9,16.2,237,ninguno
-AL-096,Queso Sano,variado,7.4,33.9,36.5,334,ninguno
-AL-097,Cerdo Blanco,variado,19.7,23.1,37.9,57,ninguno
-AL-098,Cacahuate Orgánico,variado,22.3,17.5,27.1,204,frutos_secos
-AL-099,Pavo Blanco,variado,19.2,10.3,34.9,310,frutos_secos
-AL-100,Mantequilla Integral,variado,18.9,44.3,43.6,213,lacteos
+AL-001,Salmón Atlántico,pescado,20.4,0.0,13.4,208,pescado
+AL-002,Atún en Agua,pescado,25.5,0.0,0.8,116,pescado
+AL-003,Tilapia,pescado,20.1,0.0,2.7,108,pescado
+AL-004,Bacalao,pescado,17.8,0.0,0.9,82,pescado
+AL-005,Sardinas en Lata,pescado,24.6,0.0,11.5,208,pescado
+AL-006,Camarones,mariscos,24.0,0.2,0.3,99,mariscos
+AL-007,Langosta,mariscos,20.5,1.2,1.2,98,mariscos
+AL-008,Pulpo,mariscos,14.9,2.2,1.0,82,mariscos
+AL-009,Trucha Arcoíris,pescado,19.9,0.0,5.6,148,pescado
+AL-010,Caballa,pescado,18.6,0.0,13.9,205,pescado
+AL-011,Pechuga de Pollo,aves,31.0,0.0,3.6,165,ninguno
+AL-012,Muslo de Pollo,aves,26.0,0.0,15.5,247,ninguno
+AL-013,Pavo Magro (Pechuga),aves,29.0,0.0,2.0,135,ninguno
+AL-014,Pavo Molido,aves,27.4,0.0,7.0,176,ninguno
+AL-015,Codorniz,aves,22.6,0.0,12.1,192,ninguno
+AL-016,Pato (Pechuga),aves,19.0,0.0,11.2,189,ninguno
+AL-017,Carne de Res Magra,carnes_rojas,26.0,0.0,15.0,250,ninguno
+AL-018,Filete de Res,carnes_rojas,27.7,0.0,10.6,214,ninguno
+AL-019,Lomo de Cerdo,carnes_rojas,25.7,0.0,6.9,172,ninguno
+AL-020,Cordero (Pierna),carnes_rojas,24.5,0.0,12.3,218,ninguno
+AL-021,Ternera,carnes_rojas,22.2,0.0,5.0,145,ninguno
+AL-022,Hígado de Res,carnes_rojas,26.4,4.0,3.6,175,ninguno
+AL-023,Huevo Entero,huevos,13.0,1.1,11.0,155,huevo
+AL-024,Clara de Huevo,huevos,10.9,0.7,0.2,52,huevo
+AL-025,Yogur Griego Natural,lacteos,10.0,3.6,0.4,59,lacteos
+AL-026,Queso Cottage,lacteos,11.1,3.4,4.3,98,lacteos
+AL-027,Leche Entera,lacteos,3.2,4.8,3.3,61,lacteos
+AL-028,Leche Desnatada,lacteos,3.4,5.0,0.1,35,lacteos
+AL-029,Queso Mozzarella,lacteos,22.2,2.2,22.4,300,lacteos
+AL-030,Queso Cheddar,lacteos,24.9,1.3,33.1,403,lacteos
+AL-031,Kéfir,lacteos,3.3,4.5,3.5,61,lacteos
+AL-032,Lentejas,legumbres,9.0,20.0,0.4,116,ninguno
+AL-033,Frijoles Negros,legumbres,8.9,23.7,0.5,132,ninguno
+AL-034,Garbanzos,legumbres,8.9,27.4,2.6,164,ninguno
+AL-035,Edamame,legumbres,11.9,8.9,5.2,122,soya
+AL-036,Frijoles Rojos,legumbres,8.7,22.8,0.5,127,ninguno
+AL-037,Arvejas (Guisantes),legumbres,5.4,14.5,0.4,81,ninguno
+AL-038,Soya (Granos Cocidos),legumbres,16.6,9.9,9.0,173,soya
+AL-039,Habas,legumbres,7.6,19.7,0.4,110,ninguno
+AL-040,Tofu Firme,vegetariano,17.3,2.8,5.4,144,soya
+AL-041,Tempeh,vegetariano,20.3,9.4,10.8,193,soya
+AL-042,Seitán,vegetariano,25.0,14.0,1.9,370,gluten
+AL-043,Proteína de Guisante,vegetariano,80.0,5.0,6.0,390,ninguno
+AL-044,Avena Integral,cereales,16.9,66.3,6.9,389,gluten_traza
+AL-045,Arroz Integral,cereales,2.6,23.0,0.9,111,ninguno
+AL-046,Arroz Blanco,cereales,2.7,28.0,0.3,130,ninguno
+AL-047,Quinua,cereales,4.4,21.3,1.9,120,ninguno
+AL-048,Pasta de Trigo,cereales,5.0,25.0,0.9,131,gluten
+AL-049,Pan Integral,cereales,8.0,41.0,3.0,247,gluten
+AL-050,Pan Blanco,cereales,7.9,49.4,3.2,265,gluten
+AL-051,Maíz,cereales,3.4,19.0,1.5,96,ninguno
+AL-052,Cebada,cereales,2.3,28.2,0.4,123,gluten
+AL-053,Amaranto,cereales,3.8,23.0,1.6,102,ninguno
+AL-054,Sorgo,cereales,3.3,20.9,1.0,109,ninguno
+AL-055,Trigo Bulgur,cereales,3.1,18.6,0.2,83,gluten
+AL-056,Espinaca,verduras,2.9,3.6,0.4,23,ninguno
+AL-057,Brócoli,verduras,2.8,6.6,0.4,34,ninguno
+AL-058,Coliflor,verduras,1.9,5.0,0.3,25,ninguno
+AL-059,Zanahoria,verduras,0.9,9.6,0.2,41,ninguno
+AL-060,Pepino,verduras,0.7,3.6,0.1,16,ninguno
+AL-061,Tomate,verduras,0.9,3.9,0.2,18,ninguno
+AL-062,Pimiento Rojo,verduras,1.0,6.0,0.3,31,ninguno
+AL-063,Champiñones,verduras,3.1,3.3,0.3,22,ninguno
+AL-064,Kale (Col Rizada),verduras,2.9,8.8,1.5,43,ninguno
+AL-065,Lechuga Romana,verduras,1.2,3.3,0.3,17,ninguno
+AL-066,Cebolla,verduras,1.1,9.3,0.1,40,ninguno
+AL-067,Ajo,verduras,6.4,33.1,0.5,149,ninguno
+AL-068,Broccolini,verduras,3.1,5.1,0.5,35,ninguno
+AL-069,Alcachofa,verduras,3.3,10.5,0.2,47,ninguno
+AL-070,Apio,verduras,0.7,3.0,0.2,16,apio
+AL-071,Berenjena,verduras,1.0,5.9,0.2,25,ninguno
+AL-072,Calabacín (Zucchini),verduras,1.2,3.1,0.3,17,ninguno
+AL-073,Remolacha,verduras,1.6,9.6,0.2,43,ninguno
+AL-074,Batata (Camote),tubérculos,1.6,20.1,0.1,86,ninguno
+AL-075,Papa (Patata),tubérculos,2.0,17.5,0.1,77,ninguno
+AL-076,Manzana,frutas,0.3,14.0,0.2,52,ninguno
+AL-077,Plátano,frutas,1.1,22.8,0.3,89,ninguno
+AL-078,Naranja,frutas,0.9,11.8,0.1,47,ninguno
+AL-079,Fresa,frutas,0.7,7.7,0.3,33,ninguno
+AL-080,Arándanos,frutas,0.7,14.5,0.3,57,ninguno
+AL-081,Aguacate (Palta),frutas,2.0,8.5,15.0,160,ninguno
+AL-082,Mango,frutas,0.8,15.0,0.4,60,ninguno
+AL-083,Piña,frutas,0.5,13.1,0.1,50,ninguno
+AL-084,Papaya,frutas,0.5,10.8,0.3,43,ninguno
+AL-085,Sandía,frutas,0.6,7.6,0.2,30,ninguno
+AL-086,Uvas,frutas,0.7,18.1,0.2,69,ninguno
+AL-087,Kiwi,frutas,1.1,14.7,0.5,61,ninguno
+AL-088,Pera,frutas,0.4,15.2,0.1,57,ninguno
+AL-089,Cereza,frutas,1.1,16.0,0.2,63,ninguno
+AL-090,Durazno (Melocotón),frutas,0.9,9.5,0.3,39,ninguno
+AL-091,Nueces,frutos_secos,15.2,13.7,65.2,654,frutos_secos
+AL-092,Almendras,frutos_secos,21.2,21.6,49.9,579,frutos_secos
+AL-093,Cacahuates (Maní),frutos_secos,25.8,16.1,49.2,567,frutos_secos
+AL-094,Anacardos (Marañón),frutos_secos,18.2,30.2,43.9,553,frutos_secos
+AL-095,Semillas de Chía,semillas,16.5,42.1,30.7,486,ninguno
+AL-096,Semillas de Linaza,semillas,18.3,28.9,42.2,534,ninguno
+AL-097,Semillas de Girasol,semillas,20.8,20.0,51.5,584,ninguno
+AL-098,Semillas de Calabaza,semillas,30.2,10.7,49.1,559,ninguno
+AL-099,Pistachos,frutos_secos,20.3,27.5,45.4,562,frutos_secos
+AL-100,Avellanas,frutos_secos,15.0,16.7,60.8,628,frutos_secos
+AL-101,Aceite de Oliva,grasas,0.0,0.0,100.0,884,ninguno
+AL-102,Aceite de Coco,grasas,0.0,0.0,100.0,862,ninguno
+AL-103,Mantequilla de Maní,grasas,25.1,20.0,50.4,588,frutos_secos
+AL-104,Mantequilla de Almendras,grasas,21.0,19.0,56.0,634,frutos_secos
+AL-105,Ghee,grasas,0.3,0.0,99.5,876,lacteos
+AL-106,Proteína de Suero (Whey),suplementos,80.0,8.0,5.0,400,lacteos
+AL-107,Proteína de Soya,suplementos,85.0,5.0,3.5,390,soya
+AL-108,Proteína de Arroz,suplementos,78.0,10.0,3.0,380,ninguno
+AL-109,Caseína,suplementos,80.0,4.0,2.0,360,lacteos
+AL-110,Creatina Monohidratada,suplementos,0.0,0.0,0.0,0,ninguno
+AL-111,Leche de Almendras,bebidas,1.0,3.0,2.5,39,frutos_secos
+AL-112,Leche de Coco,bebidas,2.3,3.3,23.8,230,ninguno
+AL-113,Leche de Avena,bebidas,1.0,6.7,1.5,46,gluten_traza
+AL-114,Leche de Soya,bebidas,3.3,4.3,1.8,43,soya
+AL-115,Agua de Coco,bebidas,0.7,3.7,0.2,19,ninguno
+AL-116,Hummus,procesados,4.9,11.0,6.0,177,sésamo
+AL-117,Granola,procesados,8.4,62.4,14.3,417,gluten_traza
+AL-118,Pasta de Lentejas,procesados,14.0,30.0,1.5,190,ninguno
+AL-119,Pasta de Garbanzo,procesados,13.0,34.0,3.0,215,ninguno
+AL-120,Tortilla de Maíz,procesados,2.5,24.8,1.3,109,ninguno

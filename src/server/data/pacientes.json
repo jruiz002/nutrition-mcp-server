@@ -2,36 +2,132 @@
     "PAC-1092": {
         "nombre": "Juan Pérez",
         "edad": 35,
-        "imc": 26.5,
+        "peso_kg": 85.0,
+        "altura_cm": 175,
+        "imc": 27.8,
         "condiciones_medicas": [
-            "resistencia_a_la_insulina"
+            "resistencia_a_la_insulina",
+            "sobrepeso"
         ],
         "alergias": [
             "mariscos",
             "lacteos"
         ],
-        "objetivo": "Reducción de grasa"
+        "medicamentos": [
+            "metformina"
+        ],
+        "objetivo": "Reducción de grasa",
+        "plan_calorico_diario": 1800,
+        "nutricionista": "Dra. Ana Morales"
     },
     "PAC-1093": {
-        "nombre": "María Gonzalez",
+        "nombre": "María González",
         "edad": 28,
-        "imc": 22.1,
-        "condiciones_medicas": [],
+        "peso_kg": 62.0,
+        "altura_cm": 165,
+        "imc": 22.8,
+        "condiciones_medicas": [
+            "celiaquía"
+        ],
         "alergias": [
             "gluten"
         ],
-        "objetivo": "Mantenimiento"
+        "medicamentos": [],
+        "objetivo": "Mantenimiento y bienestar general",
+        "plan_calorico_diario": 2000,
+        "nutricionista": "Dr. Carlos Rivera"
     },
     "PAC-1094": {
         "nombre": "Carlos López",
         "edad": 45,
-        "imc": 31.0,
+        "peso_kg": 98.0,
+        "altura_cm": 178,
+        "imc": 30.9,
         "condiciones_medicas": [
-            "hipertension"
+            "hipertension",
+            "pre-diabetes"
         ],
         "alergias": [
             "frutos_secos"
         ],
-        "objetivo": "Pérdida de peso"
+        "medicamentos": [
+            "lisinopril"
+        ],
+        "objetivo": "Pérdida de peso y control de presión",
+        "plan_calorico_diario": 1600,
+        "nutricionista": "Dra. Ana Morales"
+    },
+    "PAC-1095": {
+        "nombre": "Sofía Hernández",
+        "edad": 22,
+        "peso_kg": 55.0,
+        "altura_cm": 160,
+        "imc": 21.5,
+        "condiciones_medicas": [
+            "anemia_leve"
+        ],
+        "alergias": [],
+        "medicamentos": [
+            "sulfato_ferroso"
+        ],
+        "objetivo": "Ganancia de masa muscular",
+        "plan_calorico_diario": 2400,
+        "nutricionista": "Dr. Carlos Rivera"
+    },
+    "PAC-1096": {
+        "nombre": "Roberto Díaz",
+        "edad": 60,
+        "peso_kg": 74.0,
+        "altura_cm": 172,
+        "imc": 25.0,
+        "condiciones_medicas": [
+            "colesterol_alto",
+            "hipotiroidismo"
+        ],
+        "alergias": [
+            "soya",
+            "huevo"
+        ],
+        "medicamentos": [
+            "levotiroxina",
+            "atorvastatina"
+        ],
+        "objetivo": "Control de colesterol y mantenimiento",
+        "plan_calorico_diario": 1900,
+        "nutricionista": "Dra. Lucía Vásquez"
+    },
+    "PAC-1097": {
+        "nombre": "Valentina Torres",
+        "edad": 30,
+        "peso_kg": 70.0,
+        "altura_cm": 168,
+        "imc": 24.8,
+        "condiciones_medicas": [
+            "sindrome_intestino_irritable"
+        ],
+        "alergias": [
+            "lacteos",
+            "gluten",
+            "soya"
+        ],
+        "medicamentos": [],
+        "objetivo": "Reducción de inflamación y digestión saludable",
+        "plan_calorico_diario": 2100,
+        "nutricionista": "Dra. Lucía Vásquez"
+    },
+    "PAC-1098": {
+        "nombre": "Andrés Martínez",
+        "edad": 17,
+        "peso_kg": 68.0,
+        "altura_cm": 180,
+        "imc": 21.0,
+        "condiciones_medicas": [],
+        "alergias": [
+            "mariscos"
+        ],
+        "medicamentos": [],
+        "objetivo": "Rendimiento deportivo (atletismo)",
+        "plan_calorico_diario": 3000,
+        "nutricionista": "Dr. Carlos Rivera"
     }
 }

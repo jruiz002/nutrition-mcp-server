@@ -32,7 +32,8 @@ class MCPClient:
         self.reader_thread = threading.Thread(target=self._read_stdout, daemon=True)
         self.reader_thread.start()
         
-        # Enviar petición de inicialización
+        # Enviar petición de inicialización (timeout amplio: la primera vez
+        # 'npx' puede tardar en descargar el paquete del servidor oficial)
         response = self.send_request("initialize", {
             "protocolVersion": "2024-11-05",
             "capabilities": {},
@@ -40,7 +41,7 @@ class MCPClient:
                 "name": "nutritional-mcp-client",
                 "version": "1.0.0"
             }
-        })
+        }, timeout=30.0)
         
         if response and not "error" in response:
             # Enviar notificación de initialized

@@ -191,7 +191,11 @@ def handle_tools_call(request):
     is_error = False
 
     if tool_name == "consultar_perfil_paciente":
-        result = consultar_perfil_paciente(tool_args.get("paciente_id"))
+        pid = tool_args.get("paciente_id") or tool_args.get("id_paciente")
+        if not pid:
+            result = "Error: Falta el parámetro 'paciente_id'."
+        else:
+            result = consultar_perfil_paciente(pid)
     elif tool_name == "buscar_equivalencia_macronutrientes":
         result = buscar_equivalencia_macronutrientes(tool_args.get("alimento_origen"), tool_args.get("gramos"))
     elif tool_name == "verificar_inventario_suplementos":

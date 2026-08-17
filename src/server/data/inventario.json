@@ -1,34 +1,162 @@
 {
+    "zona_1": {
+        "omega_3": {
+            "disponible": 8,
+            "precio_q": 150.0,
+            "unidad": "frasco 60 caps"
+        },
+        "vitamina_d3": {
+            "disponible": 15,
+            "precio_q": 90.0,
+            "unidad": "frasco 90 caps"
+        },
+        "proteina_suero": {
+            "disponible": 3,
+            "precio_q": 450.0,
+            "unidad": "bolsa 1kg"
+        },
+        "magnesio": {
+            "disponible": 20,
+            "precio_q": 120.0,
+            "unidad": "frasco 60 tabs"
+        },
+        "zinc": {
+            "disponible": 10,
+            "precio_q": 95.0,
+            "unidad": "frasco 60 tabs"
+        }
+    },
     "zona_10": {
         "omega_3": {
             "disponible": 12,
-            "precio": 150.0
+            "precio_q": 150.0,
+            "unidad": "frasco 60 caps"
         },
         "proteina_suero": {
             "disponible": 5,
-            "precio": 450.0
+            "precio_q": 450.0,
+            "unidad": "bolsa 1kg"
         },
         "vitamina_c": {
             "disponible": 20,
-            "precio": 80.0
+            "precio_q": 80.0,
+            "unidad": "frasco 90 caps"
+        },
+        "vitamina_d3": {
+            "disponible": 7,
+            "precio_q": 90.0,
+            "unidad": "frasco 90 caps"
+        },
+        "probioticos": {
+            "disponible": 9,
+            "precio_q": 200.0,
+            "unidad": "frasco 30 caps"
+        },
+        "colageno_hidrolizado": {
+            "disponible": 4,
+            "precio_q": 280.0,
+            "unidad": "bolsa 500g"
+        },
+        "magnesio": {
+            "disponible": 14,
+            "precio_q": 120.0,
+            "unidad": "frasco 60 tabs"
         }
     },
     "zona_14": {
         "omega_3": {
             "disponible": 0,
-            "precio": 150.0
+            "precio_q": 150.0,
+            "unidad": "frasco 60 caps"
         },
         "proteina_suero": {
             "disponible": 15,
-            "precio": 450.0
+            "precio_q": 450.0,
+            "unidad": "bolsa 1kg"
         },
         "vitamina_c": {
             "disponible": 50,
-            "precio": 80.0
+            "precio_q": 80.0,
+            "unidad": "frasco 90 caps"
         },
         "creatina": {
             "disponible": 8,
-            "precio": 300.0
+            "precio_q": 300.0,
+            "unidad": "bolsa 500g"
+        },
+        "hierro": {
+            "disponible": 22,
+            "precio_q": 85.0,
+            "unidad": "frasco 60 tabs"
+        },
+        "vitamina_b12": {
+            "disponible": 18,
+            "precio_q": 110.0,
+            "unidad": "frasco 60 tabs"
+        },
+        "acido_folico": {
+            "disponible": 30,
+            "precio_q": 75.0,
+            "unidad": "frasco 60 tabs"
+        },
+        "proteina_vegana": {
+            "disponible": 6,
+            "precio_q": 420.0,
+            "unidad": "bolsa 1kg"
+        }
+    },
+    "mixco": {
+        "omega_3": {
+            "disponible": 5,
+            "precio_q": 150.0,
+            "unidad": "frasco 60 caps"
+        },
+        "proteina_suero": {
+            "disponible": 10,
+            "precio_q": 450.0,
+            "unidad": "bolsa 1kg"
+        },
+        "vitamina_c": {
+            "disponible": 35,
+            "precio_q": 80.0,
+            "unidad": "frasco 90 caps"
+        },
+        "magnesio": {
+            "disponible": 8,
+            "precio_q": 120.0,
+            "unidad": "frasco 60 tabs"
+        },
+        "zinc": {
+            "disponible": 12,
+            "precio_q": 95.0,
+            "unidad": "frasco 60 tabs"
+        },
+        "creatina": {
+            "disponible": 3,
+            "precio_q": 300.0,
+            "unidad": "bolsa 500g"
+        }
+    },
+    "antigua_guatemala": {
+        "omega_3": {
+            "disponible": 6,
+            "precio_q": 155.0,
+            "unidad": "frasco 60 caps"
+        },
+        "vitamina_d3": {
+            "disponible": 9,
+            "precio_q": 92.0,
+            "unidad": "frasco 90 caps"
+        },
+        "colageno_hidrolizado": {
+            "disponible": 7,
+            "precio_q": 285.0,
+            "unidad": "bolsa 500g"
+        },
+        "probioticos": {
+            "disponible": 11,
+            "precio_q": 205.0,
+            "unidad": "frasco 30 caps"
         }
     }
 }

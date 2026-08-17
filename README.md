@@ -238,18 +238,45 @@ You should see:
 ✅ Base de datos clínica simulada creada exitosamente.
 ```
 
-### Step 4 — Run the chatbot
+### Step 4 — Run the chatbot (Local or Cloud)
 
+This project supports running the Nutritional MCP Server either locally (as a subprocess) or remotely in the cloud (via TCP Sockets) for Wireshark analysis.
+
+#### Option A: Run Locally (Default)
 ```bash
 ./run.sh
 ```
-
 The script automatically:
 1. Creates a Python virtual environment (`venv/`)
 2. Installs all dependencies from `requirements.txt`
-3. Launches the interactive chatbot
+3. Launches the interactive chatbot and spawns the local MCP servers.
 
-> If you get a permissions error: `chmod +x run.sh`
+#### Option B: Run Remotely on AWS (For Wireshark JSON-RPC Capture)
+If you want to capture the JSON-RPC traffic over a plain TCP connection, you can host the server on an AWS EC2 instance.
+
+**1. Copy the server code to your EC2 instance:**
+```bash
+# Replace 'keys-aws.pem' and the IP with your own
+scp -i keys-aws.pem -r src/server ubuntu@YOUR_EC2_IP:~/server
+```
+
+**2. Start the server on AWS using `socat`:**
+Connect to your EC2 via SSH and run:
+```bash
+sudo apt update && sudo apt install socat -y
+cd server
+nohup socat TCP-LISTEN:5000,fork EXEC:"python3 mcp_server.py" > servidor.log 2>&1 &
+```
+*(This runs the server in the background so it survives when you close the SSH terminal. Make sure your EC2 Security Group allows Custom TCP Inbound traffic on port 5000).*
+
+**3. Connect your local chatbot to the cloud server:**
+Back on your local machine, export the environment variable and start the script:
+```bash
+export REMOTE_NUTRITIONAL_SERVER="YOUR_EC2_IP:5000"
+./run.sh
+```
+
+> **Note for Wireshark:** Because we use `socat` to create a plain TCP tunnel (without TLS/HTTPS encryption), you can open Wireshark locally, filter by `tcp.port == 5000`, and inspect the `JSON-RPC 2.0` packets in clear text.
 
 ### Step 5 — Interact
 

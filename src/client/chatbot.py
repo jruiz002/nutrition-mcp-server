@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from mcp_client import MCPClient
+from mcp_client import MCPClient, TCPMCPClient
 from logger import MCPLogger
 
 console = Console()
@@ -61,9 +61,29 @@ class ChatbotHost:
     def setup_servers(self):
         console.print("[yellow]Iniciando servidores MCP...[/yellow]")
 
-        # 1. Nutritional MCP Server — custom server for this project
-        nutri_cmd = [sys.executable, os.path.join(self.base_dir, "src", "server", "mcp_server.py")]
-        self._start_client(nutri_cmd, "Nutricional-Server")
+        # 1. Nutritional MCP Server
+        remote_server = os.environ.get("REMOTE_NUTRITIONAL_SERVER")
+        if remote_server:
+            # Ejemplo: 98.92.199.207:5000
+            try:
+                host, port_str = remote_server.split(":")
+                console.print(f"[blue]Conectando a servidor nutricional remoto en {host}:{port_str}...[/blue]")
+                client = TCPMCPClient(host, int(port_str), "Nutricional-Server")
+                client.start(self.logger)
+                
+                # Fetch and map tools from the TCP client
+                tools = client.get_tools_for_llm()
+                for t in tools:
+                    t_name = t["name"]
+                    self.system_prompt += f"\n- {t_name}: {t.get('description', '')}"
+                    self.available_tools[t_name] = {"client": client, "schema": t}
+            except Exception as e:
+                console.print(f"[red]Error conectando a servidor remoto: {e}[/red]")
+                sys.exit(1)
+        else:
+            # Servidor local por defecto (subprocess)
+            nutri_cmd = [sys.executable, os.path.join(self.base_dir, "src", "server", "mcp_server.py")]
+            self._start_client(nutri_cmd, "Nutricional-Server")
 
         # 2. Filesystem MCP Server (official, NPM) — read/write access to this project directory
         fs_cmd = ["npx", "-y", "@modelcontextprotocol/server-filesystem", self.base_dir]

@@ -153,3 +153,94 @@ class MCPClient:
         if self.process:
             self.process.terminate()
             self.is_connected = False
+
+
+import socket
+
+class TCPMCPClient(MCPClient):
+    """Cliente que implementa JSON-RPC para comunicarse con un servidor MCP remoto por TCP Sockets."""
+    
+    def __init__(self, host, port, name):
+        self.host = host
+        self.port = port
+        self.name = name
+        self.sock = None
+        self.message_id = 1
+        self.responses = {}
+        self.tools = []
+        self.lock = threading.Lock()
+        self.is_connected = False
+
+    def start(self, logger=None):
+        self.logger = logger
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.sock.connect((self.host, self.port))
+        
+        self.reader_thread = threading.Thread(target=self._read_socket, daemon=True)
+        self.reader_thread.start()
+        
+        response = self.send_request("initialize", {
+            "protocolVersion": "2024-11-05",
+            "capabilities": {},
+            "clientInfo": {
+                "name": "nutritional-mcp-client-tcp",
+                "version": "1.0.0"
+            }
+        }, timeout=30.0)
+        
+        if response and not "error" in response:
+            self.send_notification("notifications/initialized", {})
+            self.is_connected = True
+            if self.logger:
+                self.logger.log_interaction(self.name, "initialize", "SUCCESS", response)
+            
+            tools_response = self.send_request("tools/list", {})
+            if tools_response and "result" in tools_response:
+                self.tools = tools_response["result"]["tools"]
+                if self.logger:
+                    self.logger.log_interaction(self.name, "tools/list", "SUCCESS", tools_response)
+        else:
+            if self.logger:
+                self.logger.log_interaction(self.name, "initialize", "ERROR", response)
+            raise Exception(f"Fallo al inicializar servidor TCP {self.name}")
+
+    def _read_socket(self):
+        # Para leer línea por línea del socket
+        f = self.sock.makefile('r', encoding='utf-8')
+        while True:
+            try:
+                line = f.readline()
+                if not line:
+                    break
+                response = json.loads(line)
+                if "id" in response:
+                    with self.lock:
+                        self.responses[response["id"]] = response
+            except Exception:
+                pass
+
+    def send_notification(self, method, params):
+        msg = {"jsonrpc": "2.0", "method": method, "params": params}
+        self.sock.sendall((json.dumps(msg) + "\n").encode('utf-8'))
+
+    def send_request(self, method, params, timeout=20.0):
+        with self.lock:
+            req_id = self.message_id
+            self.message_id += 1
+            
+        msg = {"jsonrpc": "2.0", "id": req_id, "method": method, "params": params}
+        self.sock.sendall((json.dumps(msg) + "\n").encode('utf-8'))
+        
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            with self.lock:
+                if req_id in self.responses:
+                    return self.responses.pop(req_id)
+            time.sleep(0.05)
+            
+        return {"error": {"message": "Timeout esperando respuesta del socket"}}
+
+    def stop(self):
+        if self.sock:
+            self.sock.close()
+            self.is_connected = False

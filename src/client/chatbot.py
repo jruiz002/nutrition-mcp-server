@@ -42,8 +42,8 @@ class ChatbotHost:
         # Conversation history as list of message dicts (OpenAI-compatible format)
         self.history = []
 
-        # Base directory of the project
-        self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        # Base directory of the project (one level up from src)
+        self.base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
         # System prompt for the nutritional assistant
         self.system_prompt = (
@@ -62,7 +62,7 @@ class ChatbotHost:
         console.print("[yellow]Iniciando servidores MCP...[/yellow]")
 
         # 1. Nutritional MCP Server — custom server for this project
-        nutri_cmd = [sys.executable, os.path.join(self.base_dir, "server", "mcp_server.py")]
+        nutri_cmd = [sys.executable, os.path.join(self.base_dir, "src", "server", "mcp_server.py")]
         self._start_client(nutri_cmd, "Nutricional-Server")
 
         # 2. Filesystem MCP Server (official, NPM) — read/write access to this project directory

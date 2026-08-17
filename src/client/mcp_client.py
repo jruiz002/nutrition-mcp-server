@@ -86,7 +86,7 @@ class MCPClient:
         self.process.stdin.write(json.dumps(msg) + "\n")
         self.process.stdin.flush()
 
-    def send_request(self, method, params, timeout=5.0):
+    def send_request(self, method, params, timeout=20.0):
         """Envía una petición y espera la respuesta."""
         with self.lock:
             req_id = self.message_id

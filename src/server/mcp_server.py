@@ -33,10 +33,15 @@ def consultar_perfil_paciente(paciente_id):
 def buscar_equivalencia_macronutrientes(alimento_origen, gramos):
     alimentos = load_csv('alimentos.csv')
     
-    # Buscar el alimento original
+    if not alimento_origen:
+        return {"error": "Falta el parámetro 'alimento_origen'."}
+    if gramos is None:
+        return {"error": "Falta el parámetro 'gramos'."}
+        
+    # Buscar el alimento original (match parcial)
     origen = None
     for a in alimentos:
-        if a['nombre'].lower() == alimento_origen.lower():
+        if alimento_origen.lower() in a['nombre'].lower():
             origen = a
             break
             
@@ -197,7 +202,9 @@ def handle_tools_call(request):
         else:
             result = consultar_perfil_paciente(pid)
     elif tool_name == "buscar_equivalencia_macronutrientes":
-        result = buscar_equivalencia_macronutrientes(tool_args.get("alimento_origen"), tool_args.get("gramos"))
+        ao = tool_args.get("alimento_origen") or tool_args.get("alimento") or tool_args.get("alimento_base")
+        g = tool_args.get("gramos") or tool_args.get("cantidad_gramos") or tool_args.get("cantidad")
+        result = buscar_equivalencia_macronutrientes(ao, g)
     elif tool_name == "verificar_inventario_suplementos":
         result = verificar_inventario_suplementos(tool_args.get("categoria_producto"), tool_args.get("sucursal"))
     else:

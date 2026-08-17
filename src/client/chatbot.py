@@ -225,6 +225,15 @@ class ChatbotHost:
                         except json.JSONDecodeError:
                             tool_args = {}
 
+                        # Sanitizar argumentos de Qwen para git_add
+                        if tool_name == "git_add" and "files" in tool_args:
+                            if isinstance(tool_args["files"], str):
+                                try:
+                                    parsed = json.loads(tool_args["files"])
+                                    tool_args["files"] = parsed if isinstance(parsed, list) else [tool_args["files"]]
+                                except json.JSONDecodeError:
+                                    tool_args["files"] = [tool_args["files"]]
+
                         console.print(f"[dim italic]Qwen invocó herramienta: {tool_name}[/dim italic]")
 
                         if tool_name in self.available_tools:

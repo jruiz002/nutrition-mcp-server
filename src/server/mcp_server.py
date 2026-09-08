@@ -206,7 +206,17 @@ def handle_tools_call(request):
         g = tool_args.get("gramos") or tool_args.get("cantidad_gramos") or tool_args.get("cantidad")
         result = buscar_equivalencia_macronutrientes(ao, g)
     elif tool_name == "verificar_inventario_suplementos":
-        result = verificar_inventario_suplementos(tool_args.get("categoria_producto"), tool_args.get("sucursal"))
+        # Accept common parameter name variants sent by different LLMs
+        cat = (tool_args.get("categoria_producto")
+               or tool_args.get("categoria")
+               or tool_args.get("producto")
+               or tool_args.get("suplemento")
+               or tool_args.get("supplement"))
+        suc = (tool_args.get("sucursal")
+               or tool_args.get("branch")
+               or tool_args.get("sede")
+               or tool_args.get("location"))
+        result = verificar_inventario_suplementos(cat, suc)
     else:
         is_error = True
         result = f"Tool '{tool_name}' no existe."

@@ -158,6 +158,24 @@ class ChatbotHost:
 
         self.cleanup()
 
+    def _extract_error_detail(self, e):
+        """Pull the full, untruncated error message out of an OpenAI SDK exception.
+
+        Prefers the parsed JSON error body from the API (e.g. TokenRouter's
+        {"error": {"code": ..., "message": ...}}) over the SDK's own str(e),
+        since the SDK message is often generic ("Internal Server Error") while
+        the body carries the actual upstream reason.
+        """
+        body = getattr(e, "body", None)
+        if isinstance(body, dict):
+            err = body.get("error", body)
+            if isinstance(err, dict):
+                code = err.get("code")
+                message = err.get("message", "")
+                return f"[{code}] {message}" if code else message
+            return str(err)
+        return str(e)
+
     def _call_llm_with_retry(self, messages, tools, max_retries=4):
         """Call the LLM (Qwen via TokenRouter) with automatic retry on rate limit and server errors."""
         kwargs = {
@@ -174,23 +192,26 @@ class ChatbotHost:
             try:
                 return self.client.chat.completions.create(**kwargs)
             except RateLimitError as e:
+                detail = self._extract_error_detail(e)
                 if attempt < max_retries - 1:
                     wait = 30
-                    console.print(f"[yellow]⚠ Límite de velocidad (429). Esperando {wait}s... (intento {attempt+1}/{max_retries-1})[/yellow]")
+                    console.print(f"[yellow]⚠ Límite de velocidad (429): {detail}. Esperando {wait}s... (intento {attempt+1}/{max_retries-1})[/yellow]")
                     time.sleep(wait)
                 else:
-                    console.print(f"[red]✗ Límite de tasa agotado: {str(e)[:150]}[/red]")
+                    console.print(f"[red]✗ Límite de tasa agotado: {detail}[/red]")
                     return None
             except InternalServerError as e:
+                detail = self._extract_error_detail(e)
                 if attempt < max_retries - 1:
                     wait = 10 * (attempt + 1)
-                    console.print(f"[yellow]⚠ Error interno del servidor. Esperando {wait}s... (intento {attempt+1}/{max_retries-1})[/yellow]")
+                    console.print(f"[yellow]⚠ Error interno del servidor ({e.status_code}): {detail}. Esperando {wait}s... (intento {attempt+1}/{max_retries-1})[/yellow]")
                     time.sleep(wait)
                 else:
-                    console.print("[red]✗ El servidor de TokenRouter no está disponible. Intenta de nuevo.[/red]")
+                    console.print(f"[red]✗ El servidor de TokenRouter no está disponible: {detail}[/red]")
                     return None
             except APIStatusError as e:
-                console.print(f"[red]✗ Error de API ({e.status_code}): {str(e)[:150]}[/red]")
+                detail = self._extract_error_detail(e)
+                console.print(f"[red]✗ Error de API ({e.status_code}): {detail}[/red]")
                 return None
 
     def _process_llm_response(self, user_input):

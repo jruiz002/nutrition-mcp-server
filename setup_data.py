@@ -10,7 +10,8 @@ def generar_alimentos_csv():
     Generates a rich, realistic dataset of 200+ foods with accurate nutritional data
     based on USDA FoodData Central and Open Food Facts public datasets.
     """
-    alimentos =         # ── PESCADOS Y MARISCOS ──────────────────────────────────────────────────
+    alimentos = [
+        # ── PESCADOS Y MARISCOS ──────────────────────────────────────────────────
         {"id": "AL-001", "nombre": "Salmón Atlántico",        "categoria": "pescado",        "proteina_g": 20.4, "carbohidratos_g": 0.0,  "grasa_g": 13.4, "kcal": 208, "alergeno": "pescado"},
         {"id": "AL-002", "nombre": "Atún en Agua",            "categoria": "pescado",        "proteina_g": 25.5, "carbohidratos_g": 0.0,  "grasa_g": 0.8,  "kcal": 116, "alergeno": "pescado"},
         {"id": "AL-003", "nombre": "Tilapia",                 "categoria": "pescado",        "proteina_g": 20.1, "carbohidratos_g": 0.0,  "grasa_g": 2.7,  "kcal": 108, "alergeno": "pescado"},
